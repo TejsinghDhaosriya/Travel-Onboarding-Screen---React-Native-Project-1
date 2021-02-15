@@ -20,17 +20,17 @@ const { COLORS, FONTS, SIZES } = theme;
 const onBoardings = [
     {
         title: "Let's Travelling",
-        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
+        description: "“Jobs fill your pockets, adventures fill your soul.”",
         img: onboarding1
     },
     {
         title: "Navigation",
-        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
+        description: "“Jobs fill your pockets, adventures fill your soul.”",
         img: onboarding2
     },
     {
         title: "Destination",
-        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
+        description: "“Jobs fill your pockets, adventures fill your soul.”",
         img: onboarding3
     }
 ];
@@ -42,6 +42,7 @@ const OnBoarding = () => {
 
     React.useEffect(() => {
         scrollX.addListener(({ value }) => {
+            console.log(value,SIZES.width)
             if (Math.floor(value / SIZES.width) === onBoardings.length - 1) {
                 setCompleted(true);
             }
